@@ -14,6 +14,6 @@ export type XXHashAPI = {
   create64(seed?: bigint): XXHash<bigint>;
 };
 
-declare module "xxhash-wasm" {
-  export default function xxhash(): Promise<XXHashAPI>;
+declare module "@ridafkih/xxhash-wasm" {
+  export default function xxhash(): XXHashAPI;
 }
