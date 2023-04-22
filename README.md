@@ -43,13 +43,13 @@ setup needed.
 ### From npm
 
 ```sh
-npm install --save xxhash-wasm
+npm install --save @ridafkih/xxhash-wasm
 ```
 
 Or with Yarn:
 
 ```sh
-yarn add xxhash-wasm
+yarn add @ridafkih/xxhash-wasm
 ```
 
 ### From [Unpkg][unpkg]
@@ -76,7 +76,7 @@ The WebAssembly is contained in the JavaScript bundle, so you don't need to
 manually fetch it and create a new WebAssembly instance.
 
 ```javascript
-import xxhash from "xxhash-wasm";
+import xxhash from "@ridafkih/xxhash-wasm";
 
 // Creates the WebAssembly instance.
 xxhash().then(hasher => {
@@ -142,13 +142,13 @@ automatically be selected.
 **Using ES Modules**
 
 ```javascript
-import xxhash from "xxhash-wasm";
+import xxhash from "@ridafkih/xxhash-wasm";
 ```
 
 **Using CommonJS**
 
 ```javascript
-const xxhash = require("xxhash-wasm");
+const xxhash = require("@ridafkih/xxhash-wasm");
 ```
 
 ## Performance
