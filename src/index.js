@@ -3,7 +3,8 @@
 // couldn't be distributed easily as the user would need to host xxhash.wasm
 // and then fetch it, to be able to use it.
 // eslint-disable-next-line no-undef
-const wasmBytes = new Uint8Array(WASM_PRECOMPILED_BYTES);
+
+const wasmBytes = new Uint8Array(global.WASM_PRECOMPILED_BYTES);
 
 const u32_BYTES = 4;
 const u64_BYTES = 8;
@@ -26,22 +27,20 @@ const XXH64_STATE_SIZE_BYTES =
   u32_BYTES + // reserved32
   u64_BYTES; // reserved64
 
-async function xxhash() {
+function xxhash() {
   const {
-    instance: {
-      exports: {
-        mem,
-        xxh32,
-        xxh64,
-        init32,
-        update32,
-        digest32,
-        init64,
-        update64,
-        digest64,
-      },
+    exports: {
+      mem,
+      xxh32,
+      xxh64,
+      init32,
+      update32,
+      digest32,
+      init64,
+      update64,
+      digest64,
     },
-  } = await WebAssembly.instantiate(wasmBytes);
+  } = new WebAssembly.Instance(new WebAssembly.Module(wasmBytes));
 
   let memory = new Uint8Array(mem.buffer);
   // Grow the wasm linear memory to accommodate length + offset bytes
