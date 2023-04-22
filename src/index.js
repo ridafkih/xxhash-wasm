@@ -4,7 +4,7 @@
 // and then fetch it, to be able to use it.
 // eslint-disable-next-line no-undef
 
-const wasmBytes = new Uint8Array(global.WASM_PRECOMPILED_BYTES);
+const wasmBytes = new Uint8Array(WASM_PRECOMPILED_BYTES);
 
 const u32_BYTES = 4;
 const u64_BYTES = 8;
