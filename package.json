@@ -1,5 +1,5 @@
 {
-  "name": "xxhash-wasm",
+  "name": "@ridafkih/xxhash-wasm",
   "version": "1.0.2",
   "description": "A WebAssembly implementation of xxHash",
   "type": "module",
