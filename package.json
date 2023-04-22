@@ -1,6 +1,6 @@
 {
   "name": "@ridafkih/xxhash-wasm",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "A WebAssembly implementation of xxHash",
   "type": "module",
   "main": "./cjs/xxhash-wasm.cjs",
